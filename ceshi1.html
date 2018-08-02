@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="button">点击</button>
+</body>
+
+</html>
+<!-- <script type="text/javascript">
+var chushi = 0;
+var jieshu = 10;
+var button = document.getElementById("button");
+button.onclick = function() {
+  if (chushi * 1 < jieshu * 1) {
+    chushi = chushi + 1;
+    if (chushi == jieshu) {
+      jieshu = 1;
+    }
+  } else {
+    chushi = chushi - 1;
+    if (chushi == jieshu) {
+      jieshu = 10;
+    }
+  }
+  console.log(chushi);
+};
+</script> -->
+<script type="text/javascript">
+var chushi = 0;
+var jieshu = 10;
+var button = document.getElementById("button");
+button.onclick = function() {
+  if (chushi * 1 < jieshu * 1) {
+    chushi = chushi + 1;
+    console.log(chushi)
+    if (chushi * 1 == 10) {
+      chushi = 0;
+    }
+  }
+};
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>测试</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <style type="text/css">
+  .button {
+    margin: 200px;
+    width: 50px;
+    height: 30px;
+    background-color: #f00;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .buclick {
+    background-color: #999;
+  }
+
+  ul>li>a:before {
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    bottom: 0px;
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background-color: #ed6d00;
+    content: "";
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+    transition: all 0.5s;
+  }
+
+  ul>li:hover>a:before {
+    transform: scale3d(1, 1, 1);
+    color: #ed6d00;
+  }
+  </style>
+</head>
+
+<body>
+  <button class="button">时间</button>
+  <ul>
+    <li><a href="">哈哈</a></li>
+    <li><a href="">嘿嘿</a></li>
+    <li><a href="">啊啊</a></li>
+    <li><a href="">下划线</a></li>
+  </ul>
+</body>
+
+</html>
+<script type="text/javascript">
+var flases = true;
+$(".button").click(function() {
+  var data = false;
+  var date = new Date();
+  var hour = date.getMinutes();
+  console.log(hour);
+  console.log(flases)
+  //页面刚加载能点击一次
+  if (flases == true) {
+    console.log("---------------")
+    console.log("第一次点击")
+    flases = false;
+    data = true;
+    console.log(flases)
+  } else if (flases == false) { //第一次点击过后
+    if (hour * 1 == 56 && data == false) {
+      console.log("12点以后，可以点击")
+      console.log("++++++++++++++")
+      flases = true;
+    } else {
+      console.log("第二次不能点击")
+    }
+  }
+});
+</script>
